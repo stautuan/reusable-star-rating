@@ -1,6 +1,13 @@
+// Inline CSS styles
+const containerStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '16px',
+};
+
 function App() {
   return (
-    <div>
+    <div style={containerStyle}>
       <div>
         {/* Generating the # of stars */}
         {Array.from({ length: 5 }, (_, i) => (
