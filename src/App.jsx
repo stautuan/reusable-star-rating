@@ -1,20 +1,30 @@
-// Inline CSS styles
+// Define inline CSS styles outside the component
 const containerStyle = {
   display: 'flex',
   alignItems: 'center',
   gap: '16px',
 };
 
-function App() {
+const starContainerStyle = {
+  display: 'flex',
+  gap: '4px',
+};
+
+const textStyle = {
+  lineHeight: '1',
+  margin: '0',
+};
+
+function App({ maxRating }) {
   return (
     <div style={containerStyle}>
-      <div>
+      <div style={starContainerStyle}>
         {/* Generating the # of stars */}
-        {Array.from({ length: 5 }, (_, i) => (
+        {Array.from({ length: maxRating }, (_, i) => (
           <span>S{i + 1}</span>
         ))}
       </div>
-      <p>10</p>
+      <p style={textStyle}>10</p>
     </div>
   );
 }

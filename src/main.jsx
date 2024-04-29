@@ -4,6 +4,7 @@ import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <App maxRating={5} />
+    <App maxRating={10} />
   </React.StrictMode>
 );
