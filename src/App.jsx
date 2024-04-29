@@ -15,7 +15,7 @@ const textStyle = {
   margin: '0',
 };
 
-function App({ maxRating }) {
+function App({ maxRating = 5 }) {
   return (
     <div style={containerStyle}>
       <div style={starContainerStyle}>
