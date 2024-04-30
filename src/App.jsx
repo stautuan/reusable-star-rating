@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 // Define inline CSS styles outside the component
 const containerStyle = {
   display: 'flex',
@@ -15,6 +17,8 @@ const textStyle = {
 };
 
 function App({ maxRating = 5 }) {
+  const [rating, setRating] = useState(0);
+
   return (
     <div style={containerStyle}>
       <div style={starContainerStyle}>
@@ -22,7 +26,7 @@ function App({ maxRating = 5 }) {
           <Star key={i} />
         ))}
       </div>
-      <p style={textStyle}>10</p>
+      <p style={textStyle}>{rating || ''}</p>
     </div>
   );
 }
@@ -52,11 +56,6 @@ function Star() {
 export default App;
 
 /*
-FULL STAR
-
-
-
-
 EMPTY STAR
 
 <svg
