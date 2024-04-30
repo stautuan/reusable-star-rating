@@ -8,6 +8,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       maxRating={5}
       messages={['Terrible', 'Bad', 'Okay', 'Good', 'Amazing']}
     />
-    <App size={24} color='red' className='test' />
+    <App size={24} color='red' className='test' defaultRating={3} />
   </React.StrictMode>
 );
