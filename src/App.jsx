@@ -23,7 +23,7 @@ function App({ maxRating = 5 }) {
     <div style={containerStyle}>
       <div style={starContainerStyle}>
         {Array.from({ length: maxRating }, (_, i) => (
-          <Star key={i} />
+          <Star key={i} onClick={() => setRating(i + 1)} />
         ))}
       </div>
       <p style={textStyle}>{rating || ''}</p>
